@@ -19,13 +19,12 @@ Database server should run PostgreSQL version > `11.3`. Web apps and database sh
 separate subnets. Database should have firewall rules allowing queries from web apps only.
 
 Stack:
-    ● AWS infrastructure
-        ○ Load Balancer
-        ○ 3 Web Servers
-    ■ Docker app:
-        ● nginx, php-cgi
-
-    ○ Postgres Server
+* AWS infrastructure
+  * Load Balancer
+  * 3 Web Servers
+* Docker app:
+  * nginx, php-cgi
+* Postgres Server
 
 ## Expected Results:
 
