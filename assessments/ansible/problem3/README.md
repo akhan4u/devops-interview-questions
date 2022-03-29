@@ -20,8 +20,7 @@ While you can draw inspiration from the open-source cookbooks/modules, you will 
 
 
 ## 🛠 Skills
-Ansible, Chef, Puppet, DevOps...
-
+Ansible, Chef, Puppet, Linux, DevOps.
 
 ## Authors
 
