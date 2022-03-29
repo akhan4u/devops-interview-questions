@@ -22,8 +22,7 @@ Instead, you should provide a script to enable us to build these environments ou
 We should be able to provide the necessary configuration to the script and deploy the application to `VirtualBox/EC2` from our workstations.
 
 ## 🛠 Skills
-Ansible, Chef, Puppet, DevOps...
-
+Ansible, Chef, Puppet, Linux, DevOps.
 
 ## Authors
 

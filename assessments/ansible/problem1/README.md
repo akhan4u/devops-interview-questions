@@ -13,8 +13,7 @@ Avoid using `command` or `shell` module.
 - Run an Nginx Container from the Above Image.
 
 ## 🛠 Skills
-Ansible, DevOps...
-
+Ansible, Linux, DevOps.
 
 ## Authors
 
