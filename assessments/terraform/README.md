@@ -5,24 +5,25 @@
 ## Explanation
 
 Configure AWS environment and resources in an automated way.
+
 Your solution should produce a working environment containing publicly accessible load
 balancer, with 3 web app servers as backends, and a database server.
 
 ## What to do?
 
-Using Terraform, provision AWS VPC inside region/AZs of your choice. VPC should include a
-minimum amount of network components required for your solution to work (subnets, routes,
-security groups, ngw, igw, etc...). You should provision web app servers behind publicly
-accessible LB, web apps should not be publicly accessible and not have public IPs, but should
-be able to connect to the Internet. Web apps should serve static web pages with random text.
-Database server should run PostgreSQL version > `11.3`. Web apps and database should be on
-separate subnets. Database should have firewall rules allowing queries from web apps only.
+* Using Terraform, provision AWS VPC inside region/AZs of your choice. VPC should include a minimum amount of network components required for your solution to work (`subnets`, `routes`, `security groups`, `ngw`, `igw`, etc). 
+* You should provision web app servers behind publicly accessible LB, web apps should not be publicly accessible and not have public IPs, but should be able to connect to the Internet. 
+* Web apps should serve static web pages with random text.
+* Database server should run PostgreSQL version > `11.3`. 
+* Web apps and database should be on separate subnets. 
+* Database should have firewall rules allowing queries from web apps only.
 
-### Stack:
+### Stack
+
 * AWS infrastructure
   * Load Balancer
   * 3 Web Servers
-* Docker app:
+* Docker app
   * nginx, php-cgi
 * Postgres Server
 
@@ -35,7 +36,7 @@ separate subnets. Database should have firewall rules allowing queries from web 
 5. README file explaining how to implement your solution. **Make sure that code for your solution is not publicly accessible**
 
 ## 🛠 Skills
-Terraform, AWS, DevOps...
+Terraform, AWS, DevOps
 
 
 ## Authors
