@@ -18,7 +18,7 @@ be able to connect to the Internet. Web apps should serve static web pages with 
 Database server should run PostgreSQL version > `11.3`. Web apps and database should be on
 separate subnets. Database should have firewall rules allowing queries from web apps only.
 
-Stack:
+### Stack:
 * AWS infrastructure
   * Load Balancer
   * 3 Web Servers
@@ -26,7 +26,7 @@ Stack:
   * nginx, php-cgi
 * Postgres Server
 
-## Expected Results:
+## Expected Results
 
 1. Terraform to provision the infrastructure
 2. Single endpoint serving static web content from 3 web apps
