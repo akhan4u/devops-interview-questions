@@ -1,0 +1,41 @@
+---
+   - hosts: "{{host_name}}"
+     gather_facts: no
+     become: true
+     tasks:
+       - name: Install packages
+         apt:
+           name:
+             - docker
+             - git
+           state: present
+       - name: Create an empty directory
+         file:
+           path: /tmp/git_demo/
+           state: directory
+
+       - name: list content of /tmp dir
+         ansible.builtin.command: ls -l /tmp/
+         register: myoutput
+
+       - name: Print content of /tmp
+         ansible.builtin.debug:
+           var: myoutput.stdout_lines
+
+       - name: Pulling repository
+         ansible.builtin.git:
+           repo: 'https://github.com/docker/cli'
+           dest: /tmp/git_demo/
+           clone: yes
+       - name: pull nginx docker image
+         community.docker.docker_image:
+           name: nginx
+           source: pull
+           state: present
+           tag: stable-perl
+       - name: Running nginx container
+         community.docker.docker_container:
+           name: nginx_ansible_container
+           image: nginx:stable-perl
+           state: started
+           ports: 8080:80
